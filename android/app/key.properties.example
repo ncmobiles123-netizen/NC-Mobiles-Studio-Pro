@@ -1,0 +1,10 @@
+# Copy this file to android/app/key.properties for a LOCAL release
+# build. Do not commit the real file — it's already excluded via
+# .gitignore. For CI builds, this file is generated automatically by
+# .github/workflows/build-release.yml from repository secrets, so you
+# do not need to create it yourself for CI.
+
+storePassword=your_keystore_password
+keyPassword=your_key_password
+keyAlias=upload
+storeFile=upload-keystore.jks

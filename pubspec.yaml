@@ -1,0 +1,49 @@
+name: nc_studio_pro
+description: NC Mobiles Product Image Studio Pro — premium bulk product image editor.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+
+  # State management
+  provider: ^6.1.2
+
+  # Image picking / files
+  image_picker: ^1.1.2
+  file_picker: ^8.0.6
+  path_provider: ^2.1.3
+  permission_handler: ^11.3.1
+
+  # Image processing (crop, resize, rotate, flip, compositing, webp/png encode)
+  image: ^4.2.0
+
+  # On-device background removal
+  tflite_flutter: ^0.11.0
+
+  # Native WebP encoding for the required 0.webp..4.webp export set
+  flutter_image_compress: ^2.3.0
+
+  # UUIDs for layers/frames/projects
+  uuid: ^4.4.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Directories (not exact filenames) so the build doesn't fail if a
+  # specific file — like the TFLite model, which is fetched separately,
+  # see README — isn't present yet. Flutter only requires that listed
+  # directories exist, not that they're non-empty.
+  assets:
+    - assets/models/
+    - assets/templates/
