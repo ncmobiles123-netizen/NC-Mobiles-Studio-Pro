@@ -23,7 +23,7 @@ if (hasKeystoreProperties) {
 
 android {
     namespace = "com.ncmobiles.studiopro"
-    compileSdk = 34
+    compileSdk = 35
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
@@ -37,7 +37,7 @@ android {
         applicationId = "com.ncmobiles.studiopro"
         // tflite_flutter + on-device inference require API 24+.
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = (System.getenv("BUILD_NUMBER") ?: "1").toInt()
         versionName = System.getenv("BUILD_VERSION") ?: "1.0.0"
     }
